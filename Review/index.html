@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>405 Review</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <a id="use" class="btn btn-primary">Click Me</a>
+        <div id="change">This will disappear</div>
+        
+        <script>
+            var httpRequest;
+            document.getElementById("use").addEventListener('click', doStuff);
+            
+            function doStuff() {
+                var check = document.getElementById("change").style.visibility;
+                
+                if(check === 'visible') {
+                    document.getElementById("change").style.visibility='hidden';
+                }
+                else {
+                    document.getElementById("change").style.visibility='visible';
+                }
+            }
+        </script>
+    </body>
+</html>

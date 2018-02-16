@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>forms</title>
+</head>
+<body>
+    <form method="POST" action="/test">
+        <input type="text" size="30" name="firstname" /> First Name<br>
+        <input type="text" size="30" name="lastname" />  Last Name<br>
+        <input type="submit" value="Submit" />
+    </form>
+    <form method="POST" action="/flavor">
+        <label for="Vanilla">
+            <input type="checkbox" name="Vanilla" value="Vanilla" /> Vanilla<br>
+        </label>
+        <label for="Chocolate">
+            <input type="checkbox" name="Chocolate" value="Chocolate"/> Chocolate<br>
+        </label>
+        <label for="Strawberry">
+            <input type="checkbox" name="Strawberry" value="Strawberry"/> Strawberry<br>
+        </label>
+        
+        <input type="submit" value="submit" />
+    </form>
+    <form method="POST" action="/radio">
+        <label for="Rock">
+            <input type="radio" id="Rock" name="music" value="Rock"/> Rock<br>
+        </label>
+        <label for="Country">
+            <input type="radio" id="Country" name="music" value="Country"/> Country<br>
+        </label>
+        <label for="Pop">
+            <input type="radio" id="Pop" name="music" value="Pop"/> Pop<br>
+        </label>
+        
+        <input type="submit" value="submit" />
+    </form>
+</body>
+</html>
