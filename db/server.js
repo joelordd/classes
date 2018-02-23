@@ -138,11 +138,3 @@ function handleLogout(req, res) {
 server.listen( () => {
         console.log(`Server running at http://localhost:8000/`);
 });
-
-const response = 
-
-   'HTTP/1.1 200 OK'          + '\r\n' +
- 
-  'Content-length: 11'       + '\r\n' + 
-
-   'Content-type: text/html';
