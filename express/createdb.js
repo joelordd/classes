@@ -1,6 +1,6 @@
 const pg = require('pg');
 
-process.env.PGDATABASE = 'db';
+process.env.PGDATABASE = 'express';
 process.env.PGPASSWORD = 'password';
 
 const pool = new pg.Pool();

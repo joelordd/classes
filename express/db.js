@@ -1,6 +1,6 @@
 const pg = require('pg');
 
-process.env.PGDATABASE = 'db';
+process.env.PGDATABASE = 'express';
 process.env.PGPASSWORD = 'password';
 
 const pool = new pg.Pool();
@@ -13,10 +13,13 @@ pool.on('error', (err, client) => {
 function getUser(username, password, cb) {
 	pool.connect((err, client, done) => {
 		if (err) throw err;
+		
 		const q = "select color from users where username=$1::text and password=$2::text";
 		const params = [username, password];
+		
 		client.query(q, params, (err, result) => {
 			if (err) {
+				console.log(result);
 				console.log(err.stack); 
 				cb(null); 
 			} else if (result.rows.length === 0) {
