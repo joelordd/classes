@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Admin Page</title>
+</head>
+<body>
+	<h2>#message#</h2>
+	
+	<fieldset>
+		<legend>Create a User</legend>
+		<form method="POST" action="/createUser">
+			Username: <input type="text" name="usernameC" size="32" value=""/> <br>
+			Password: <input type="text" name="passwordC" size="32" value=""/> <br>
+			<input type="submit" value="Create User"/>
+		</form>
+	</fieldset> <br>
+	
+	<fieldset>
+		<legend>Delete a User</legend>
+		<form method="POST" action="/deleteUser">
+			Username: <input type="text" name="usernameD" size="32" value=""/> <br>
+			<input type="submit" value="Delete User"/>
+		</form>
+	</fieldset> <br>
+	
+	<fieldset>
+		<legend>Change a User's Password</legend>
+		<form method="POST" action="/changePassword">
+			Username: <input type="text" name="usernameN" size="32" value=""/> <br>
+			New Password: <input type="text" name="passwordN" size="32" value=""/> <br>
+			<input type="submit" value="Change Password"/>
+		</form>
+	</fieldset>
+
+	<p>See a List Of All Users</p>
+	<form method="GET" action="/userList.html">
+		<input type="submit" value="GO"/>
+	</form>
+
+	<p>Logout</p>
+	<form method="POST" action="/logout">
+		<input type="submit" value="Logout"/>
+	</form>
+</body>
+</html>
