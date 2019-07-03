@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="container" />
+
+        <script src="ajax.js"></script>
+        <script src="parse-response.js"></script>
+        
+        <label>City</label>
+        <input type="text" id="city" size="20" />
+        <button id="submit" type="button">Submit</button>
+        
+        <script>
+            var httpRequest;
+            let result = document.getElementById('container').appendChild(document.createTextNode(" "));
+            document.getElementById("submit").addEventListener('click', makeRequest);
+            
+            function makeRequest() {
+                httpRequest = new XMLHttpRequest();
+
+                if (!httpRequest) {
+                    alert('Giving up :( Cannot create an XMLHTTP instance');
+                    return false;
+                }
+                
+                httpRequest.onreadystatechange = changeCity;
+                httpRequest.open('GET', 'index.html');
+                httpRequest.send();
+                
+            }
+                
+            function changeCity() {
+                    /* global ajax */
+                    /* global parseResponse */
+                    result.nodeValue = "";
+                    var container = document.getElementById('container');
+                    var url = "https://api.openweathermap.org/data/2.5/weather?q="; 
+                    var city = document.getElementById('city').value; 
+                    var apiKey = "e1348667c39121a0c86e579f3b05263e"; // Replace "APIKEY" with your own API key; otherwise, your HTTP request will not work 
+                    url += city + "&appid=" + apiKey; 
+                    ajax(url, function(resp) {        
+                    resp = parseResponse(resp);
+                    result.nodeValue = resp;
+                    });
+            }
+        </script>
+        
+    </body>
+</html>

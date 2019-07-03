@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <img id="img" src="https://ictatshr.files.wordpress.com/2010/05/big-red-button-click-me-shrjoneh2.jpg">
+        <p id="no">NOO</p>
+        <img id="pressed" src="">
+        <script>
+            var img = document.getElementById('img');
+            var no = document.getElementById('no');
+            var pressed = document.getElementById('pressed');
+            var message = function() {
+                alert('Do not click the button, a catastrophe will occur!!!!');
+                
+                img.removeEventListener('mouseover', message, false);
+            };
+            var clicked = function() {
+                no.style.fontSize = "500%";
+                pressed.src='https://media.giphy.com/media/HhTXt43pk1I1W/giphy.gif';
+                img.removeEventListener('click', clicked, false);
+            };
+            img.addEventListener('mouseover', message, false);
+            img.addEventListener('click', clicked, false);
+        </script>
+        
+    </body>
+</html>

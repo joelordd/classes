@@ -1,0 +1,27 @@
+body {
+	text-align: center;
+	
+}
+
+h1 {
+    color: DarkOliveGreen;
+    font-family: Helvetica, Arial;
+    font-size: 3rem;
+    background-image: url("http://brucemctague.com/wp-content/uploads/2011/07/CountryMusic.jpg");
+    background-size: cover;
+    
+}
+
+.main {
+    font-size: 2rem;
+    color: Red;
+    
+}
+
+#modern {
+    color: Blue;
+}
+
+#footer {
+    font-size: 0.75em;
+}

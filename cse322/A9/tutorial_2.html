@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <ul id="start">
+            <li>This is 1</li>
+            <li>This is 2</li>
+            <li>This is 3</li>
+        </ul>
+        
+        <script>
+            var rem = document.getElementById('start').lastChild.previousSibling;
+            start.removeChild(rem);
+            document.getElementById('start').appendChild(document.createElement('li'));
+            document.getElementById('start').appendChild(document.createTextNode('This is 4')).lastChild;
+        </script>
+    </body>
+</html>

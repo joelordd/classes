@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!--<script src="https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&callback=mycallback"></script>-->
+        <script src="ajax.js"></script>
+        <script src="parse-response.js"></script>
+    </head>
+    <body>
+        <header class="container">
+            <div class="row">
+                <h1 class="col-sm-8">Jem's Book Finder</h1>
+                <nav id="navigation" class="col-sm-4">
+                    <a href="index.html">Main</a>
+                    <a href="findBook.html">Find books</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+        </header>
+        <section id="use" class="container text-center">
+            <h1 class="col-sm-12">Find the Book You Want</h1>
+            <p>Input the book's ISBN number</p>
+            <input type="text" id="find" size="20" />
+            <a id="submit" class="btn btn-primary">Find</a>
+            
+            <script>
+            var httpRequest;
+            let result = document.getElementById('use').appendChild(document.createTextNode(" "));
+            document.getElementById("submit").addEventListener('click', makeRequest);
+            
+            function makeRequest() {
+                httpRequest = new XMLHttpRequest();
+
+                if (!httpRequest) {
+                    alert('Giving up :( Cannot create an XMLHTTP instance');
+                    return false;
+                }
+                
+                httpRequest.onreadystatechange = getBook;
+                httpRequest.open('GET', 'findBook.html');
+                httpRequest.send();
+                
+            }
+                
+            function getBook() {
+                    /* global ajax */
+                    /* global parseResponse */
+                    result.nodeValue = "";
+                    var url = "https://openlibrary.org/api/books?bibkeys=ISBN:";
+                    var callback = "&format=json";
+                    var ISBN = document.getElementById('find').value;
+                    url += ISBN + callback; 
+                    ajax(url, function(resp) {        
+                    //resp = parseResponse(resp, ISBN);
+                    result.nodeValue = resp;
+                    });
+            }
+        </script>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        const numbers = [12, 43, 1, 2, 54, 20];
+
+        function findMinMax (numbers) {
+            let min = numbers[0];
+            let max = numbers[0];
+    
+            for(let i = 0; i < numbers.length; i++) {
+                if(min > numbers[i]) { min = numbers[i];}
+                if(max < numbers[i]) { max = numbers[i];}
+            }
+        
+            return `[${min}, ${max}]`;
+        }
+        
+        console.log(findMinMax(numbers));
+    </script>
+
+
+</body>
+</html>

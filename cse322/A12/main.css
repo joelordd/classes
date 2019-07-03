@@ -1,0 +1,57 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  padding: 20px 0;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header a {
+  padding: 0 20px;
+  margin: 0;
+}
+
+
+.jumbotron .col-sm-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('http://img.kb-cdn.com/imgviewer/NVpIM2ptOHhYRzVmUk5rM1NrNlFxYVV6enV4aGk2UFRJMmxPckdDUUVNYkFXTlhieTJRRzFUdk1GdjBzR0puMmsrNVJhdVZSaGFaWTdyWUZacFZpc1VmbW1uVExVR1pBWDZsc1dZQXFsbzFHK1lQT2MvekxseXlUcEMyQ0gxOWxSRXhMSnlTWFpTazNiR0xhUkg4VHZSa0JjY0hkajhSSjYyNVdpaTVyWTRHTFl0cVdBTTRWMVVSNWRWWTE5NEo5UWdDU2tsWlpjbUx2RlRPWTRqODJ2dz09?square=0');
+  background-size: cover;
+  color: #ffffff;
+  height: 600px;
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}

@@ -1,0 +1,90 @@
+body {
+	text-align: center;
+	background-image: url("http://979kickfm.com/files/2014/01/Guitar-And-Wood-Background-credit-iStock-134931384-630x448.jpg");
+	background-size: cover;
+	color: white;
+}
+
+h1 {
+    color: DarkOliveGreen;
+    font-family: Helvetica, Arial;
+    font-size: 3rem;
+    background-size: cover;
+    border: 5px solid SaddleBrown;
+}
+
+img {
+    border: 2px solid black;
+}
+
+#desc {
+    font-size: 2rem;
+}
+
+.main {
+    font-size: 2rem;
+    
+}
+
+.main li {
+    display: inline;
+}
+
+.google {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+#classic {
+    color: Red;
+    border-right: 2px solid black;
+    padding-right: 4px;
+}
+
+#modern {
+    color: Blue;
+    border-left: 2px solid black;
+    padding-left: 4px;
+}
+
+#footer {
+    font-size: 0.75em;
+}
+
+#link {
+    color: blue;
+}
+
+.button {
+    float: right;
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 2rem;
+}
+.button a {
+    position: relative;
+}
+
+.button a:active {
+    top: 2px;
+    left: 2px;
+}
+
+.button2 {
+    float: left;
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.button2 a {
+    position: relative;
+}
+
+.button2 a:active {
+    bottom: 2px;
+    right: 2px;
+}
