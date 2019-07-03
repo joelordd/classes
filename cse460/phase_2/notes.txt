@@ -1,0 +1,35 @@
+TODO LIST
+make it only scan for .s files
+
+
+
+
+
+i=i>>2;
+//shifts two bits to the right
+i=i&1;
+//bitwise and comparison
+
+//make a function: pass parameter of position you want and then do the above
+
+//os.cp
+//      call to assmebler
+//      call to VM
+
+add 3 1 //turns into:
+
+int inst = 0;
+inst += 2 << 11;
+inst += 3 << 9;
+inst += 1 << 6;
+
+
+grab stack
+then increment.
+
+Call:
+    Decrement
+
+
+Return in reverse order 
+    Increment
